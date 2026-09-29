@@ -1,0 +1,70 @@
+/* ===================================================================
+   1. SEMANTIK OCH RUBRIKER
+
+   UPPGIFT
+   Sidan är en påse div. Det finns inga landmärken, ingen h1, och
+   två element som bara SER UT som rubriker.
+
+   1. Öppna sidan. Den ser helt normal ut. Det är poängen.
+   2. Byt ut div-arna mot rätt element så skärmläsaren får
+      landmärken att hoppa mellan.
+   3. Rätta rubrikhierarkin. En h1 per sida, sedan i ordning
+      utan hopp.
+   4. Kontrollera i DevTools -> Elements -> Accessibility.
+
+   =================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #16242b;
+    background-color: #ffffff;
+}
+
+.page {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2.4rem 1.6rem;
+}
+
+h1 { font-size: 2.8rem; margin-bottom: 1.2rem; }
+h2 { font-size: 2.2rem; margin: 2.4rem 0 0.8rem; }
+h3 { font-size: 1.8rem; margin: 1.6rem 0 0.4rem; }
+p  { margin-bottom: 1.2rem; }
+
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    background-color: #0f3d4d;
+    color: #ffffff;
+    padding: 1.6rem;
+}
+
+.wordmark { font-size: 1.9rem; font-weight: 700; }
+
+.main-nav { display: flex; gap: 2rem; }
+.site-header a { color: #ffffff; }
+
+.site-footer {
+    border-top: 1px solid #6b7b82;
+    padding: 1.6rem;
+    font-size: 1.4rem;
+    color: #55666d;
+}
+
+.heading-large { font-size: 2.8rem; font-weight: 700; margin-bottom: 1.2rem; }
+.heading-small { font-size: 1.8rem; font-weight: 700; margin: 1.6rem 0 0.4rem; }
+h4 { font-size: 2.2rem; margin: 2.4rem 0 0.8rem; }

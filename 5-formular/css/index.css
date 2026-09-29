@@ -1,0 +1,127 @@
+/* ===================================================================
+   5. ETT TILLGÄNGLIGT FORMULÄR
+
+   UPPGIFT
+   Formuläret går att fylla i med mus, om man ser bra och gissar
+   rätt. Sex fel att laga:
+
+   1. Inget fält har en label. Placeholder är enda ledtråden, och
+      den försvinner så fort man börjar skriva.
+   2. Alla fält är type="text", även e-post, telefon och datum.
+   3. Radioknapparna är inte grupperade. "Vilken grupp?" är en div.
+   4. Radio- och kryssrutetexterna är span, så det går inte att
+      klicka på texten för att välja.
+   5. Felrutan är en tom röd remsa. Den säger inte vad som är fel,
+      och skärmläsaren märker inte att den dykt upp.
+   6. Skicka-knappen är en div.
+
+   TESTA SÅ HÄR
+   Fyll i hela formuläret utan mus. Piltangenter i radiogruppen,
+   mellanslag på kryssrutan. Klicka sedan på varje etikett —
+   hamnar markören i fältet sitter kopplingen.
+
+   =================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #16242b;
+    background-color: #ffffff;
+}
+
+.page {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2.4rem 1.6rem;
+}
+
+h1 { font-size: 2.8rem; margin-bottom: 1.2rem; }
+h2 { font-size: 2.2rem; margin: 2.4rem 0 0.8rem; }
+h3 { font-size: 1.8rem; margin: 1.6rem 0 0.4rem; }
+p  { margin-bottom: 1.2rem; }
+
+form { max-width: 48rem; }
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.6rem;
+}
+
+label { font-weight: 600; }
+
+input[type="text"] {
+    font-family: inherit;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    min-height: 4.4rem;
+    /* 4,6:1 mot vitt — kravet för komponenter är 3:1 */
+    border: 1px solid #6b7b82;
+}
+
+input:focus {
+    outline: none;
+}
+
+.field-hint {
+    font-size: 1.4rem;
+    color: #55666d;
+}
+
+.fieldset {
+    border: 1px solid #6b7b82;
+    padding: 1.2rem 1.6rem 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.fieldset-label { font-weight: 600; margin-bottom: 0.4rem; }
+
+.radio-row,
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 4.4rem;
+}
+
+.radio-row label,
+.checkbox-row label { font-weight: 400; }
+
+.checkbox-row { margin-bottom: 1.6rem; }
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.error-message {
+    display: none;
+    height: 4px;
+    background-color: #a3140f;
+    margin-bottom: 1.6rem;
+}
+
+.button {
+    font-family: inherit;
+    font-size: 1.7rem;
+    font-weight: 700;
+    min-height: 4.4rem;
+    padding: 1.2rem 2.4rem;
+    background-color: #0f3d4d;
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+}

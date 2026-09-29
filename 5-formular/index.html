@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Anmälan till simskolan</title>
+</head>
+<body>
+    <main class="page">
+        <h1>Anmälan till simskolan</h1>
+
+        <form novalidate>
+            <div class="error-message"></div>
+
+            <div class="field">
+                <input type="text" name="namn" placeholder="Barnets namn">
+            </div>
+
+            <div class="field">
+                <input type="text" name="epost" placeholder="E-post till vårdnadshavare">
+                <span class="field-hint">Hit skickar vi bekräftelsen.</span>
+            </div>
+
+            <div class="field">
+                <input type="text" name="telefon" placeholder="Telefon">
+            </div>
+
+            <div class="field">
+                <input type="text" name="fodelsedatum" placeholder="Födelsedatum">
+            </div>
+
+            <div class="fieldset">
+                <div class="fieldset-label">Vilken grupp?</div>
+                <div class="radio-row">
+                    <input type="radio" name="grupp" value="baddaren">
+                    <span>Baddaren, nybörjare</span>
+                </div>
+                <div class="radio-row">
+                    <input type="radio" name="grupp" value="skoldpaddan">
+                    <span>Sköldpaddan, fortsättning</span>
+                </div>
+                <div class="radio-row">
+                    <input type="radio" name="grupp" value="vuxna">
+                    <span>Vuxna</span>
+                </div>
+            </div>
+
+            <div class="checkbox-row">
+                <input type="checkbox" name="villkor">
+                <span>Jag har läst villkoren för avanmälan</span>
+            </div>
+
+            <div class="button">Skicka anmälan</div>
+        </form>
+    </main>
+</body>
+</html>

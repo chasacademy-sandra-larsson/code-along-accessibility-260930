@@ -1,0 +1,65 @@
+/* ===================================================================
+   2. ALT-TEXTER
+
+   UPPGIFT
+   Tre bilder, tre olika fel.
+
+   1. Logotypen har en lång beskrivning trots att föreningens namn
+      står som text bredvid.
+   2. Fotot har alt="bild", vilket inte säger någonting.
+   3. Skiljelinjen saknar alt-attribut helt.
+
+   Rätta alla tre. Fråga er för varje bild: bär den information
+   som inte redan finns i texten?
+
+   =================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #16242b;
+    background-color: #ffffff;
+}
+
+.page {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2.4rem 1.6rem;
+}
+
+h1 { font-size: 2.8rem; margin-bottom: 1.2rem; }
+h2 { font-size: 2.2rem; margin: 2.4rem 0 0.8rem; }
+h3 { font-size: 1.8rem; margin: 1.6rem 0 0.4rem; }
+p  { margin-bottom: 1.2rem; }
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2.4rem;
+}
+
+.logo { width: 4.8rem; height: 4.8rem; }
+.wordmark { font-size: 1.9rem; font-weight: 700; }
+
+.content-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.6rem;
+}
+
+.divider {
+    width: 100%;
+    height: auto;
+    margin: 2.4rem 0;
+}
