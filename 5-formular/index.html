@@ -14,44 +14,48 @@
             <div class="error-message"></div>
 
             <div class="field">
-                <input type="text" name="namn" placeholder="Barnets namn">
+                <label for="namn">Barnets namn</label>
+                <input type="text" id="namn" name="namn">
             </div>
 
             <div class="field">
-                <input type="text" name="epost" placeholder="E-post till vårdnadshavare">
+                <label for="epost">E-post till vårdnadshavare</label>
+                <input type="text" id="epost" name="epost">
                 <span class="field-hint">Hit skickar vi bekräftelsen.</span>
             </div>
 
             <div class="field">
-                <input type="text" name="telefon" placeholder="Telefon">
+                <label for="telefon">Telefon</label>
+                <input type="text" id="telefon" name="telefon">
             </div>
 
             <div class="field">
-                <input type="text" name="fodelsedatum" placeholder="Födelsedatum">
+                <label for="fodelsedatum">Födelsedatum</label>
+                <input type="text" id="fodelsedatum" name="fodelsedatum">
             </div>
 
-            <div class="fieldset">
+            <fieldset class="fieldset">
                 <div class="fieldset-label">Vilken grupp?</div>
                 <div class="radio-row">
-                    <input type="radio" name="grupp" value="baddaren">
-                    <span>Baddaren, nybörjare</span>
+                    <input type="radio" id="skoldpaddan" name="grupp" value="baddaren">
+                    <label for="skoldpaddan">Baddaren, nybörjare</label>
                 </div>
                 <div class="radio-row">
-                    <input type="radio" name="grupp" value="skoldpaddan">
-                    <span>Sköldpaddan, fortsättning</span>
+                    <input type="radio" id="skoldpaddan" name="grupp" value="skoldpaddan">
+                    <label for="skoldpaddan">Sköldpaddan, fortsättning</label>
                 </div>
                 <div class="radio-row">
-                    <input type="radio" name="grupp" value="vuxna">
-                    <span>Vuxna</span>
+                    <input type="radio" id="vuxna" name="grupp" value="vuxna">
+                    <label for="vuxna">Vuxna</label>
                 </div>
-            </div>
+            </fieldset>
 
             <div class="checkbox-row">
-                <input type="checkbox" name="villkor">
-                <span>Jag har läst villkoren för avanmälan</span>
+                <input type="checkbox" id="villkor" name="villkor">
+                <label for="villkor">Jag har läst villkoren för avanmälan</span>
             </div>
 
-            <div class="button">Skicka anmälan</div>
+            <button type="submit" class="button">Skicka anmälan</div>
         </form>
     </main>
 </body>

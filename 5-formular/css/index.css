@@ -52,6 +52,11 @@ p  { margin-bottom: 1.2rem; }
 
 form { max-width: 48rem; }
 
+button:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 3px;
+}
+
 .field {
     display: flex;
     flex-direction: column;
